@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:wonders/common_libs.dart';
@@ -34,11 +33,6 @@ class AppLogic {
   /// Loads settings, sets up services etc.
   Future<void> bootstrap() async {
     debugPrint('bootstrap start...');
-    // Set min-sizes for desktop apps
-    // TODO: Test on Linux and confirm whether it's safe to call there, according to issue #183 its not.
-    if (!kIsWeb && (PlatformInfo.isWindows || PlatformInfo.isMacOS)) {
-      await DesktopWindow.setMinWindowSize($styles.sizes.minAppSize);
-    }
 
     if (kIsWeb) {
       // SB: This is intentionally not a debugPrint, as it's a message for users who open the console on web.

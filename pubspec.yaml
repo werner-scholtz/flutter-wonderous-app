@@ -15,7 +15,6 @@ dependencies:
     sdk: flutter
 
   collection: ^1.17.0
-  desktop_window: ^0.4.0
   drop_cap_text:
     git:
       url: https://github.com/parlough/drop_cap_text
@@ -48,7 +47,6 @@ dependencies:
   pointer_interceptor: ^0.10.1+1
   provider: ^6.0.5
   rnd: ^0.2.0
-  shared_preferences: ^2.0.17
   sized_context: ^1.0.0+1
   smooth_page_indicator: ^1.0.1
   unsplash_client: ^2.1.0+3
