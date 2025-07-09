@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:wonders/common_libs.dart';
+import 'package:wonders/l10n/app_localizations.dart';
 import 'package:wonders/logic/artifact_api_logic.dart';
 import 'package:wonders/logic/artifact_api_service.dart';
 import 'package:wonders/logic/collectibles_logic.dart';
@@ -41,11 +41,11 @@ class WondersApp extends StatefulWidget with GetItStatefulWidgetMixin {
 
 class _WondersAppState extends State<WondersApp> with GetItStateMixin {
   @override
-  void initState() {
+  void didChangeDependencies() {
     if (kIsWeb) {
       appLogic.precacheWonderImages(context);
     }
-    super.initState();
+    super.didChangeDependencies();
   }
 
   @override
